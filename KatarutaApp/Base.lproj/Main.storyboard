@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0ss-Yj-RIU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kataruta-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KatarutaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Nm-zg-roT">
+                                <rect key="frame" x="0.0" y="238" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="LKU-Rj-TYo"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="v6U-qY-vZr"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="枚数を選択してね" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItE-Bx-ulX">
+                                <rect key="frame" x="106" y="164" width="163.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="枚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6a-I0-jdJ">
+                                <rect key="frame" x="179" y="504" width="18" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAT-ws-Q8f">
+                                <rect key="frame" x="164" y="575" width="47" height="30"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <segue destination="ppO-qN-Jzo" kind="show" id="fCh-2C-qeB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Nm-zg-roT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4my-xG-gvt"/>
+                            <constraint firstItem="ItE-Bx-ulX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="6iK-We-FhC"/>
+                            <constraint firstItem="k6a-I0-jdJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7ia-J0-7ba"/>
+                            <constraint firstItem="9Nm-zg-roT" firstAttribute="top" secondItem="ItE-Bx-ulX" secondAttribute="bottom" constant="50" id="Ph5-Pu-bXv"/>
+                            <constraint firstItem="ItE-Bx-ulX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Trc-Cu-hJh"/>
+                            <constraint firstItem="UAT-ws-Q8f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e8B-Vo-UqY"/>
+                            <constraint firstItem="UAT-ws-Q8f" firstAttribute="top" secondItem="k6a-I0-jdJ" secondAttribute="bottom" constant="50" id="f02-TO-mmu"/>
+                            <constraint firstItem="9Nm-zg-roT" firstAttribute="centerX" secondItem="k6a-I0-jdJ" secondAttribute="centerX" id="rg8-g8-JoM"/>
+                            <constraint firstItem="k6a-I0-jdJ" firstAttribute="top" secondItem="9Nm-zg-roT" secondAttribute="bottom" constant="50" id="sxk-MZ-uWD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kataruta" id="rfS-vO-ds7"/>
+                    <connections>
+                        <outlet property="numberLabel" destination="k6a-I0-jdJ" id="cLi-op-M2F"/>
+                        <outlet property="picker" destination="9Nm-zg-roT" id="TWM-AS-Xug"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="38.23088455772114"/>
+        </scene>
+        <!--Kataruta-->
+        <scene sceneID="kM5-9N-6jL">
+            <objects>
+                <viewController id="ppO-qN-Jzo" customClass="playViewController" customModule="KatarutaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qaz-vU-ge0"/>
+                        <viewControllerLayoutGuide type="bottom" id="M0c-NH-sDT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i1K-IN-6Wd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Here!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv5-Wg-zJj">
+                                <rect key="frame" x="87.5" y="183.5" width="200" height="300"/>
+                                <color key="backgroundColor" red="0.8243806670984456" green="0.25248618537298323" blue="0.2532229282570107" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="gKe-d0-QJP"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="toF-yA-Sdc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0枚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gB-0V-aWq">
+                                <rect key="frame" x="173.5" y="533.5" width="28" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3gB-0V-aWq" firstAttribute="centerX" secondItem="i1K-IN-6Wd" secondAttribute="centerX" id="Ecc-lI-EQx"/>
+                            <constraint firstItem="3gB-0V-aWq" firstAttribute="top" secondItem="fv5-Wg-zJj" secondAttribute="bottom" constant="50" id="ZC8-Ri-Iu4"/>
+                            <constraint firstItem="fv5-Wg-zJj" firstAttribute="centerY" secondItem="i1K-IN-6Wd" secondAttribute="centerY" id="v27-7r-jyq"/>
+                            <constraint firstItem="fv5-Wg-zJj" firstAttribute="centerX" secondItem="i1K-IN-6Wd" secondAttribute="centerX" id="yFP-If-6tb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kataruta" id="XEr-j6-Tfs"/>
+                    <connections>
+                        <outlet property="card" destination="fv5-Wg-zJj" id="g76-Xx-MQE"/>
+                        <outlet property="countLabel" destination="3gB-0V-aWq" id="j9u-rs-lVc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pcy-fz-anK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1892" y="37.331334332833585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3mY-7H-7g8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ss-Yj-RIU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7SK-GP-H0C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bre-7t-beA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HVM-Cu-6Gk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="38"/>
+        </scene>
+    </scenes>
+</document>
